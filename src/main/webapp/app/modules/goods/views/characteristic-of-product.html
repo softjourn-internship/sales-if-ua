@@ -8,7 +8,8 @@
 						class="img-thumbnail"
 						data-toggle="modal"
 						style="margin-top: 23%"
-						></p>
+						>
+					</p>
 			</div>
 			<div  class= " col-md-8" align="center">
 					<div align="center">
@@ -16,7 +17,8 @@
 									class="table table-bordered textColor"
 									id="characteristics_list"
 									style="background-color: rgba(0, 0, 0, 0.16)">
-								<caption><h3 align="center">{{product.name}}</h3></caption>
+								<caption>
+									<h3 align="center">{{product.name}}</h3></caption>
 								<tr>
 									<th >Characteristic's title</th>
 									<th>Characteristic's value</th>
@@ -27,6 +29,7 @@
 								</tr>
 
 							</table>
+							<button class="btn btn-default" ng-click="showAModal()">Buy</button>
 					</div>
 			</div>
 			<div class="col-md-12">
@@ -76,7 +79,7 @@
 			</div>
 	<div class=" col-md-12">
 		<h3 align="center"
-			class="textColor">Comments </h3>
+			class="textColor"></h3>
 		<div class="col-md-offset-2 col-md-8">
 			<div class="panel panel-primary textColor"
 				 align="center"

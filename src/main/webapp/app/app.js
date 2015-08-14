@@ -5,6 +5,7 @@
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
   'ngResource',
+  'angularModalService',
   // Our app/modules our app/modules
   'home',
   'admin',
@@ -65,6 +66,9 @@ phonecatApp.config(['$routeProvider',
       //}).
       when('/stuff', {
         templateUrl: 'app/modules/home/views/stuff.html'
+      }).
+      when('/stuf/:categoryId/:subcategoryId', {
+        templateUrl: 'app/modules/home/views/stuf.html'
       }).
       when('/stuff/:goodId', {
         templateUrl: 'app/modules/goods/views/characteristic-of-product.html'

@@ -21,7 +21,14 @@ home.controller('MainCtrl', ['$scope', '$http', function($scope, $http){
 
 
 		// var self = this;
+
+		$scope.testCategories = [];
 		
+		// fetching categories
+		$http.get('/Practice/category').then(function(response){
+			$scope.testCategories = response.data;
+			console.log($scope.testCategories);
+		});
 
 		$http.get('app/modules/home/json/categories.json').then(function(response){
 			$scope.categories = response.data;

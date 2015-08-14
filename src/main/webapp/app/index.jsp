@@ -16,6 +16,7 @@
 
     <script src="app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="app/bower_components/angular/angular.min.js"></script>
+    <script src="app/bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
 
     <!--<script src="app/bower_components/angular-resource/angular-resource.min.js"></script>-->
     <script src="app/bower_components/angular-route/angular-route.min.js"></script>
@@ -56,14 +57,14 @@
     <!-- Phonecat Apps's libraries (DO NOT COMMENT) -->
     <!--<script src="app/bower_components/jquery/jquery.js"></script>-->
     <script src="app/bower_components/angular/angular.js"></script>
-    <script src="app/bower_components/angular-animate/angular-animate.js"></script>
+    <!-- // <script src="app/bower_components/angular-animate/angular-animate.js"></script> -->
     <script src="app/bower_components/angular-route/angular-route.js"></script>
     <script src="app/bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/js/animations.js"></script>
-    <script src="app/js/controllers.js"></script>
-    <script src="app/js/filters.js"></script>
-    <script src="app/js/services.js"></script>
+    <!-- // <script src="app/js/animations.js"></script> -->
+    <!-- // <script src="app/js/controllers.js"></script> -->
+    <!-- // <script src="app/js/filters.js"></script> -->
+    <!-- // <script src="app/js/services.js"></script> -->
 
     <!-- app/Modules and controllers -->
     <!-- Admin module -->
@@ -82,8 +83,9 @@
     <script type="text/javascript" src="app/modules/home/controllers/test.js"></script>
     <script type="text/javascript" src="app/modules/home/controllers/categoriesService.js"></script>
     <script type="text/javascript" src="app/modules/home/controllers/ProductsCtrl.js"></script>
+    <script type="text/javascript" src="app/modules/home/controllers/ProductCtrl.js"></script>
     <script type="text/javascript" src="app/modules/home/controllers/SearchCtrl.js"></script>
-    <script type="text/javascript" src="app/modules/home/controllers/CategoryService.js"></script>
+    <!-- // <script type="text/javascript" src="app/modules/home/controllers/CategoryService.js"></script> -->
     <script type="text/javascript" src="app/modules/home/controllers/LoginService.js"></script>
 
 </head>

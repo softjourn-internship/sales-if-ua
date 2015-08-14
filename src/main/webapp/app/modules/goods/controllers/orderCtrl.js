@@ -1,5 +1,5 @@
 goods
-	.controller('OrderCtrl', ['$scope', '$http', function($scope, $http){
+	.controller('OrderCtrl', ['$scope', '$http', 'close', '$element', function($scope, $http, close, $element){
 		// fields for future JSON
 		$scope.goodId = "";
 		$scope.firstName = "";
@@ -136,6 +136,11 @@ goods
 				
 
 		};
+
+		$scope.close = function(){
+			$element.modal('hide')
+			close(null, 500);
+		}; 
 
 
 	}]);

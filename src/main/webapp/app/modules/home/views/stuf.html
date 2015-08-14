@@ -1,20 +1,21 @@
-<div ng-controller="ProductsCtrl">
+<div ng-controller="ProductCtrl">
 	<!-- Page Content -->
 	<!-- .container -->
 	<div class="container">
 		<!-- Product List Title -->
 		<!-- .row -->
 		<div class="row">
+			{{hi}}
 			<!-- .col-md-12 -->
 			<div class="col-md-12">
-				<h1 class="text-center">Products for: " {{inputData}} "</h1>
+				<h1 class="text-center"></h1>
 			</div><!-- /.col-md-12 -->
 		</div><!-- /.row -->
 		<!-- Product List Content -->
 		<!-- .row -->
 		<div class="row">
 			<!-- .col-md-3 -->
-			<div class="col-md-3" ng-repeat="good in goods">
+			<div class="col-md-3" ng-repeat="good in obj.goods">
 				<div class="thumbnail" style="height: 280px">
 					<img src="app/modules/home/img/iphone.jpg">
 					<div class="caption">

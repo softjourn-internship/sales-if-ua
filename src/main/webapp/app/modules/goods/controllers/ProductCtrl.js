@@ -1,7 +1,7 @@
 /**
  * Created by andrii on 11.08.2015.
  */
-goods.controller('ProductCtrl', ['$scope', '$http','$routeParams','LoginService', function ($scope, $http, $routeParams, LoginService) {
+goods.controller('ProductCtrl', ['$scope', '$http','$routeParams','LoginService', 'ModalService', function ($scope, $http, $routeParams, LoginService, ModalService) {
     $scope.products = '';
     $scope.descriptions = '';
     $scope.user = '';
@@ -59,6 +59,23 @@ goods.controller('ProductCtrl', ['$scope', '$http','$routeParams','LoginService'
                     $scope.comments = response.data ;
                 });
             })
+        });
+    };
+
+
+
+    // using modal service
+    $scope.showAModal = function(){
+        ModalService.showModal({
+            templateUrl: "app/modules/goods/views/ordering.html",
+            controller: "OrderCtrl"
+        }).then(function(modal){
+            modal.element.modal();
+            modal.close.then(function(result){
+                $scope.message = result ? "Yes": "No";
+            });
+        }).catch(function(error){
+            console.log(error);
         });
     };
 }]);
