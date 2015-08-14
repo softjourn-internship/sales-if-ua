@@ -118,8 +118,12 @@ public class RegistretedPaymentHandler {
     }
 
     private void preparePayment(RegisteredMultiPaymentDTO paymentDTO) {
-        if(paymentDTO.getCard().equals(null)){setCard(paymentDTO.getCard());}
-        else{ setCard(paymentDTO.getCardId());}
+        if(paymentDTO.getCard().equals(null)) {
+            setCard(paymentDTO.getCardId());
+        }
+        else {
+            setCard(paymentDTO.getCard());
+        }
         this.getUsersByGoodsId(paymentDTO.getGoodsId());
         this.getGoods(paymentDTO.getGoodsId());
         defineTransactions(this.card);

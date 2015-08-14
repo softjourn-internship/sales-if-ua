@@ -60,9 +60,10 @@ public class TestNotificationService extends AbstractTestNGSpringContextTests {
     public void testSendOrderAnonymEmail() {
         List<Long> goods = new ArrayList<Long>();
         goods.add(1L);
-        goods.add(2L);
-        goods.add(3L);
-
+        goods.add(10L);
+        goods.add(21L);
+        goods.add(31L);
+        goods.add(41L);
         AnonymMultyPaymentDTO anonymMultyPaymentDTO = new AnonymMultyPaymentDTO();
         anonymMultyPaymentDTO.setEmail("tarik.danylyuk@gmai.com");
         anonymMultyPaymentDTO.setFirstName("Anonym");
@@ -77,8 +78,10 @@ public class TestNotificationService extends AbstractTestNGSpringContextTests {
     public void testSendOrderRegistEmail() {
         List<Long> goods = new ArrayList<Long>();
         goods.add(1L);
-        goods.add(2L);
-        goods.add(3L);
+        goods.add(10L);
+        goods.add(21L);
+        goods.add(31L);
+        goods.add(41L);
         RegisteredMultiPaymentDTO registeredMultiPaymentDTO = new RegisteredMultiPaymentDTO();
         registeredMultiPaymentDTO.setCard(new CreditCard());
         registeredMultiPaymentDTO.setGoodsId(goods);
