@@ -101,10 +101,13 @@ public class NotificationServiceImpl implements NotificationService {
                 Map model = new HashMap();
                 model.put("firstName", firstName);
                 String goods = new String("");
+                double amount = 0;
                 for(int i = 0; i < storages.size(); i++) {
-                    goods += storages.get(i).getGood().getName() + "<br>";
+                    goods += storages.get(i).getGood().getName() + "(" + storages.get(i).getPrice() + "$)" + "<br>";
+                    amount += storages.get(i).getPrice();
                 }
                 model.put("goods", goods);
+                model.put("totalPrice", amount);
                 String text = VelocityEngineUtils.mergeTemplateIntoString(
                         velocityEngine, "email-template/order-notification.vm", model);
                 message.setText(text, true);
